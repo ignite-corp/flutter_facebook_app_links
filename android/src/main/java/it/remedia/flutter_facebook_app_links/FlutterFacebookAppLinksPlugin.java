@@ -26,7 +26,6 @@ import io.flutter.embedding.engine.plugins.FlutterPlugin;
 import io.flutter.embedding.engine.plugins.activity.ActivityAware;
 import io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding;
 import io.flutter.plugin.common.PluginRegistry;
-import io.flutter.plugin.common.PluginRegistry.Registrar;
 
 /** FlutterFacebookAppLinksPlugin */
 public class FlutterFacebookAppLinksPlugin implements FlutterPlugin, MethodCallHandler {
@@ -71,22 +70,6 @@ public class FlutterFacebookAppLinksPlugin implements FlutterPlugin, MethodCallH
       result.notImplemented();
     }
   }
-
-  /** Plugin registration. */
-  // public static void registerWith(Registrar registrar) {
-  //   final MethodChannel channel = new MethodChannel(registrar.messenger(), CHANNEL);
-
-  //   FlutterFacebookAppLinksPlugin instance = new FlutterFacebookAppLinksPlugin(registrar);
-  //   channel.setMethodCallHandler(instance);
-  // }
-
-  // Constructor to initialize plugin inside the 'registerWith' method
-  // private FlutterFacebookAppLinksPlugin(PluginRegistry.Registrar registrar){
-
-  //   this.mContext = registrar.activeContext();
-  //   this.mActivity = registrar.activity();
-
-  // }
 
   private void activateSDK(){
     FacebookSdk.setAutoLogAppEventsEnabled(false);
